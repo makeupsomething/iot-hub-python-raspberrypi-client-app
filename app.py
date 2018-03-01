@@ -77,7 +77,6 @@ def send_confirmation_callback(message, result, user_context):
     print ( "    Properties: %s" % key_value_pair )
     SEND_CALLBACKS += 1
     print ( "    Total calls confirmed: %d" % SEND_CALLBACKS )
-    led_blink()
 
 
 def device_twin_callback(update_state, payload, user_context):
