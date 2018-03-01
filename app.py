@@ -4,14 +4,11 @@
 # Licensed under the MIT license. See LICENSE file in the project root for
 # full license information.
 
-import random
 import time
 import sys
 from iothub_client import IoTHubClient, IoTHubClientError, IoTHubTransportProvider, IoTHubClientResult
 from iothub_client import IoTHubMessage, IoTHubMessageDispositionResult, IoTHubError, DeviceMethodReturnValue
-import config as config
 import re
-from telemetry import Telemetry
 
 # HTTP options
 # Because it can poll "after 9 seconds" polls will happen effectively
@@ -156,7 +153,7 @@ def iothub_client_sample_run():
             status = client.get_send_status()
             print ( "Send status: %s" % status )
             MESSAGE_COUNT += 1
-        time.sleep(config.MESSAGE_TIMESPAN / 1000.0)
+        time.sleep(5000 / 1000.0)
 
 def usage():
     print ( "Usage: iothub_client_sample.py -p <protocol> -c <connectionstring>" )
