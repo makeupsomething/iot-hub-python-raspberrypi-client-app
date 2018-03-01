@@ -1,0 +1,13 @@
+{
+    "name": "office-monitor",
+    "version": "",
+    "description": "Office monitor",
+    "main": "app.py",
+    "author": "",
+    "license": "",
+    "language":"python",
+    "scripts": {
+      "start": "python -u app.py"
+    },
+    "dependency": null
+  }
