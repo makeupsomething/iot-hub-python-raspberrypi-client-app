@@ -51,11 +51,6 @@ PROTOCOL = IoTHubTransportProvider.MQTT
 
 CONNECTION_STRING = 'HostName=office-monitor.azure-devices.net;DeviceId=test-device;SharedAccessKey=GKhftPoLMtdg9PqeiDnhdzQYkbQHVQ3U3NPuRkjD6yg='
 
-if not is_correct_connection_string():
-    print ( "Device connection string is not correct." )
-    telemetry.send_telemetry_data(None, EVENT_FAILED, "Device connection string is not correct.")
-    sys.exit(0)
-
 
 def receive_message_callback(message, counter):
     global RECEIVE_CALLBACKS
