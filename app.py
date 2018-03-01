@@ -49,6 +49,8 @@ PROTOCOL = IoTHubTransportProvider.MQTT
 CONNECTION_STRING = 'HostName=office-monitor.azure-devices.net;DeviceId=test-device;SharedAccessKey=GKhftPoLMtdg9PqeiDnhdzQYkbQHVQ3U3NPuRkjD6yg='
 
 
+
+
 def receive_message_callback(message, counter):
     global RECEIVE_CALLBACKS
     message_buffer = message.get_bytearray()
