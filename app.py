@@ -153,18 +153,15 @@ def iothub_client_sample_run():
             print ( "IoTHubClient.send_event_async accepted message [%d] for transmission to IoT Hub." % MESSAGE_COUNT )
 
             status = client.get_send_status()
+            print ( "Message: %s" % message)
             print ( "Send status: %s" % status )
             MESSAGE_COUNT += 1
-        time.sleep(5000 / 1000.0)
+        time.sleep(10000 / 1000.0)
 
 def usage():
     print ( "Usage: iothub_client_sample.py -p <protocol> -c <connectionstring>" )
     print ( "    protocol        : <amqp, amqp_ws, http, mqtt, mqtt_ws>" )
     print ( "    connectionstring: <HostName=<host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>>" )
-
-def parse_iot_hub_name():
-    m = re.search("HostName=(.*?)\.", CONNECTION_STRING)
-    return m.group(1)
 
 if __name__ == "__main__":
     print ( "\nPython %s" % sys.version )
